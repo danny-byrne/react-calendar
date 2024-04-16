@@ -21,13 +21,13 @@ export const getClassNames = (): ILayoutClassNames => {
       width: "100vw",
       display: "flex",
       flexDirection: "column",
-      [BREAKPOINTS.MOBILE]: {
-        marginBottom: "env(safe-area-inset-bottom)",
-      },
-      [BREAKPOINTS.DESKTOP_HEIGHT]: {
-        height: `${MAX_HEIGHT_BREAKPOINT}px`,
-        overflow: "scroll",
-      },
+      // [BREAKPOINTS.MOBILE]: {
+      //   marginBottom: "env(safe-area-inset-bottom)",
+      // },
+      // [BREAKPOINTS.DESKTOP_HEIGHT]: {
+      //   height: `${MAX_HEIGHT_BREAKPOINT}px`,
+      //   overflow: "scroll",
+      // },
     },
     "Layout--Header": {
       width: "100%",

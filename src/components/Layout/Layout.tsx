@@ -5,11 +5,11 @@ interface LayoutProps {
   title?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children, title }) => {
   const classNames = getClassNames();
   return (
     <div className={classNames["Layout--appBody"]}>
-      <div className={classNames["Layout--Header"]}>Learn Recurrence Rules</div>
+      <div className={classNames["Layout--Header"]}>{title}</div>
       {children}
       {/* <Footer /> */}
     </div>
