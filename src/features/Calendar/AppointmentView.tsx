@@ -1,26 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useBoolean } from "@fluentui/react-hooks";
-import { useQueryStringParams } from "src/common/hooks/useQueryStringParams";
-import { usePanelWidth } from "src/common/hooks/usePanelWidth";
-import {
-  useGetAppointmentsQuery,
-  useGetPrescriptionsQuery,
-  useGenerateQuestionsForProviderQuery,
-  useAppointmentDeleteMutation,
-} from "src/graphQL/serverMocks/graphQLGeneratedCode";
+import { useQueryStringParams } from "@src/common/hooks/useQueryStringParams";
+import { usePanelWidth } from "@src/common/hooks/usePanelWidth";
+// import {
+//   useGetAppointmentsQuery,
+//   useGetPrescriptionsQuery,
+//   useGenerateQuestionsForProviderQuery,
+//   useAppointmentDeleteMutation,
+// } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
 
 import { Panel, Stack, Text, PanelType, Spinner } from "@fluentui/react";
-import { Back, DeleteDialog } from "src/common/components";
-import SubHeaderLayout from "src/common/components/Layout/SubHeaderLayout";
-import ActionButtonRow from "src/common/components/ActionButtonRow/ActionButtonRow";
-import ReusableCardList from "src/common/components/ReusableCardList/ReusableCardList";
+import Back from "src/components/Back";
+import { DeleteDialog } from "src/components/dialogs";
+import SubHeaderLayout from "src/components/Layout/SubHeaderLayout";
+import ActionButtonRow from "src/components/ActionButtonRow/ActionButtonRow";
+import ReusableCardList from "src/components/ReusableCardList/ReusableCardList";
 import AppointmentEdit from "./AppointmentEdit";
 
 import RouterConfig from "src/app/RouterConfig";
 import { Prescription } from "src/types/Medication";
-import { PanelStyleOverrides } from "src/common/components/Panel/PanelStyleOverrides";
-import { PagesWithDelete } from "src/common/components/dialogs/EndMedicationDialog";
+import { PanelStyleOverrides } from "src/components/Panel/PanelStyleOverrides";
+import { PagesWithDelete } from "src/components/dialogs/EndMedicationDialog";
 import { Appointment } from "src/types/Appointment";
 import { monthsFullNames } from "src/utils/utils";
 import { getToday } from "src/utils/dates";
@@ -32,7 +33,7 @@ import {
 } from "src/common/hooks/useGetTimezoneInfo";
 
 const AppointmentView: React.FC = () => {
-  const { data } = useGetAppointmentsQuery();
+  //   const { data } = useGetAppointmentsQuery();
   const { id } = useParams();
   const { getSearchParam, addSearchParam, removeSearchParam } =
     useQueryStringParams();
