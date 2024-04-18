@@ -59,29 +59,30 @@ const AppointmentView: React.FC = () => {
     if (getSearchParam("mode")) removeSearchParam("mode");
   }, []);
 
-  const { data: medicationData } = useGetPrescriptionsQuery();
-  const {
-    data: questionData,
-    loading: questionLoading,
-    refetch: refetchQuestionData,
-  } = useGenerateQuestionsForProviderQuery();
+  //   const { data: medicationData } = useGetPrescriptionsQuery();
+  //   const {
+  //     data: questionData,
+  //     loading: questionLoading,
+  //     refetch: refetchQuestionData,
+  //   } = useGenerateQuestionsForProviderQuery();
 
-  useEffect(() => {
-    refetchQuestionData();
-  }, []);
+  //   useEffect(() => {
+  //     refetchQuestionData();
+  //   }, []);
 
-  const [deleteAppointment] = useAppointmentDeleteMutation({
-    variables: { input: { id: id } },
-    refetchQueries: ["GetAppointments", "GetCareRecipientTimeline"],
-    errorPolicy: "all",
-    onCompleted: () => {
-      navigate(RouterConfig.Calendar + "?status=deleted", { replace: true });
-    },
-  });
+  //   const [deleteAppointment] = useAppointmentDeleteMutation({
+  //     variables: { input: { id: id } },
+  //     refetchQueries: ["GetAppointments", "GetCareRecipientTimeline"],
+  //     errorPolicy: "all",
+  //     onCompleted: () => {
+  //       navigate(RouterConfig.Calendar + "?status=deleted", { replace: true });
+  //     },
+  //   });
 
   const handleDelete = async (event) => {
     event.preventDefault();
-    await deleteAppointment();
+    // await deleteAppointment();
+    console.log("deleting");
     toggleHideDeleteDialog();
   };
 
