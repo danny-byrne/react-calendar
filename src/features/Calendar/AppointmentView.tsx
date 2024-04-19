@@ -86,23 +86,23 @@ const AppointmentView: React.FC = () => {
     toggleHideDeleteDialog();
   };
 
-  useEffect(() => {
-    if (medicationData) {
-      setMedications(
-        medicationData.careRecipientMedicationPrescriptions?.prescriptions
-      );
-    }
-  }, [medicationData]);
+  //   useEffect(() => {
+  //     if (medicationData) {
+  //       setMedications(
+  //         medicationData.careRecipientMedicationPrescriptions?.prescriptions
+  //       );
+  //     }
+  //   }, [medicationData]);
 
-  useEffect(() => {
-    if (data) {
-      const selectedAppointment =
-        data?.careRecipientAppointments?.appointments.filter(
-          (appointment) => appointment.id === id
-        );
-      setAppointment(selectedAppointment[0]);
-    }
-  }, [data]);
+  //   useEffect(() => {
+  //     if (data) {
+  //       const selectedAppointment =
+  //         data?.careRecipientAppointments?.appointments.filter(
+  //           (appointment) => appointment.id === id
+  //         );
+  //       setAppointment(selectedAppointment[0]);
+  //     }
+  //   }, [data]);
 
   const { appUserTimezone, careRecipientTimezone } = useGetTimezoneInfo();
 

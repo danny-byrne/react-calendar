@@ -24,10 +24,10 @@ import {
 } from "src/utils/utils";
 import { getDateAtMidday, getToday } from "src/utils/dates";
 //TODO: pull this style into calenbdar styles
-import { weeklydaypickerStyles } from "../Medications/Medications.classNames";
+// import { weeklydaypickerStyles } from "../Medications/Medications.classNames";
 import { getClassNames } from "./Calendar.classNames";
 import { Appointment } from "src/types/Appointment";
-import { isOccuringOn } from "./AppointmentUtils";
+// import { isOccuringOn } from "./AppointmentUtils";
 import ReusablePrintButton from "src/components/ReusablePrintButton/ReusablePrintButton";
 import { usePrintPanelControls } from "src/common/hooks/usePrintPanel";
 import { PrintPanel } from "src/components/Panel/PrintPanel";
@@ -191,7 +191,7 @@ const Calendar: React.FC = () => {
               setDay(date.getDate());
               setIsToday(date.toDateString() === getToday().toDateString());
             }}
-            styles={weeklydaypickerStyles}
+            // styles={weeklydaypickerStyles}
           />
           <Stack
             horizontal
