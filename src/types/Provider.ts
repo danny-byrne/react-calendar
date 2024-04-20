@@ -1,3 +1,4 @@
-import { GetProvidersQuery } from 'src/graphQL/serverMocks/graphQLGeneratedCode';
+import { GetProvidersQuery } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
 
-export type Provider = GetProvidersQuery['careRecipientProviders']['providers'][0];
+export type Provider =
+  GetProvidersQuery["careRecipientProviders"]["providers"][0];

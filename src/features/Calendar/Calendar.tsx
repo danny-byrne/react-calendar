@@ -1,41 +1,42 @@
 import React, { useEffect, useState } from "react";
 import { Stack, Text, WeeklyDayPicker } from "@fluentui/react";
-import { useIsMobile } from "src/common/hooks/useMediaQueries";
-import { useAddPanelControls } from "src/common/hooks/useAddPanel";
-import { useQueryStringParams } from "src/common/hooks/useQueryStringParams";
 import { useLocation, useNavigate } from "react-router";
-// import { useGetAppointmentsQuery } from 'src/graphQL/serverMocks/graphQLGeneratedCode';
-import { useFeedbackService } from "src/services/FeedbackService";
 
-import FloatingActionButton from "src/components/FAB/FloatingActionButton";
-import { getClassNames as getFABClassNames } from "src/components/FAB/FloatingActionButton.classNames";
+import { useIsMobile } from "@src/common/hooks/useMediaQueries";
+import { useAddPanelControls } from "@src/common/hooks/useAddPanel";
+import { useQueryStringParams } from "@src/common/hooks/useQueryStringParams";
+// import { useGetAppointmentsQuery } from '@src/graphQL/serverMocks/graphQLGeneratedCode';
+import { useFeedbackService } from "@src/services/FeedbackService";
 
-import { AddPanel } from "src/components/Panel/AddPanel";
-import SubHeaderLayout from "src/components/Layout/SubHeaderLayout";
+import FloatingActionButton from "@src/components/FAB/FloatingActionButton";
+import { getClassNames as getFABClassNames } from "@src/components/FAB/FloatingActionButton.classNames";
+
+import { AddPanel } from "@src/components/Panel/AddPanel";
+import SubHeaderLayout from "@src/components/Layout/SubHeaderLayout";
 import AppointmentAdd from "./AppointmentAdd";
-import ReusableCardList from "src/components/ReusableCardList/ReusableCardList";
+import ReusableCardList from "@src/components/ReusableCardList/ReusableCardList";
 
-import RouterConfig from "src/app/RouterConfig";
+import RouterConfig from "@src/app/RouterConfig";
 import {
   months,
   monthsFullNames,
   weekdays,
   weekdaysFull,
-} from "src/utils/utils";
-import { getDateAtMidday, getToday } from "src/utils/dates";
+} from "@src/utils/utils";
+import { getDateAtMidday, getToday } from "@src/utils/dates";
 //TODO: pull this style into calenbdar styles
 // import { weeklydaypickerStyles } from "../Medications/Medications.classNames";
 import { getClassNames } from "./Calendar.classNames";
-import { Appointment } from "src/types/Appointment";
+import { Appointment } from "@src/types/Appointment";
 // import { isOccuringOn } from "./AppointmentUtils";
-import ReusablePrintButton from "src/components/ReusablePrintButton/ReusablePrintButton";
-import { usePrintPanelControls } from "src/common/hooks/usePrintPanel";
-import { PrintPanel } from "src/components/Panel/PrintPanel";
-import CalendarPrintPanel from "src/features/PrintableContent/CalendarPrint/CalendarPrintPanel";
+import ReusablePrintButton from "@src/components/ReusablePrintButton/ReusablePrintButton";
+import { usePrintPanelControls } from "@src/common/hooks/usePrintPanel";
+import { PrintPanel } from "@src/components/Panel/PrintPanel";
+import CalendarPrintPanel from "@src/features/PrintableContent/CalendarPrint/CalendarPrintPanel";
 import {
   useGetTimezoneInfo,
   getAdjustedTime,
-} from "src/common/hooks/useGetTimezoneInfo";
+} from "@src/common/hooks/useGetTimezoneInfo";
 
 const Calendar: React.FC = () => {
   const { setSuccessToast } = useFeedbackService();

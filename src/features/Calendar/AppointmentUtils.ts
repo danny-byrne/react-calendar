@@ -1,5 +1,5 @@
 import { IComboBoxOption } from "@fluentui/react";
-import { Appointment } from "src/types/Appointment";
+import { Appointment } from "@src/types/Appointment";
 import { timeNumbersDropDownOptions } from "../../utils/utils";
 
 export type AppointmentFormikValues = {

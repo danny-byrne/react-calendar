@@ -1,3 +1,4 @@
-import { GetAppointmentsQuery } from 'src/graphQL/serverMocks/graphQLGeneratedCode';
+import { GetAppointmentsQuery } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
 
-export type Appointment = GetAppointmentsQuery['careRecipientAppointments']['appointments'][0];
+export type Appointment =
+  GetAppointmentsQuery["careRecipientAppointments"]["appointments"][0];

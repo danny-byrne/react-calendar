@@ -1,3 +1,4 @@
-import { GetAllergiesQuery } from 'src/graphQL/serverMocks/graphQLGeneratedCode';
+import { GetAllergiesQuery } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
 
-export type Allergy = GetAllergiesQuery['careRecipientAllergies']['allergies'][0];
+export type Allergy =
+  GetAllergiesQuery["careRecipientAllergies"]["allergies"][0];

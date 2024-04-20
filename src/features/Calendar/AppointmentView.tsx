@@ -11,26 +11,26 @@ import { usePanelWidth } from "@src/common/hooks/usePanelWidth";
 // } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
 
 import { Panel, Stack, Text, PanelType, Spinner } from "@fluentui/react";
-import Back from "src/components/Back";
-import { DeleteDialog } from "src/components/dialogs";
-import SubHeaderLayout from "src/components/Layout/SubHeaderLayout";
-import ActionButtonRow from "src/components/ActionButtonRow/ActionButtonRow";
-import ReusableCardList from "src/components/ReusableCardList/ReusableCardList";
+import Back from "@src/components/Back";
+import { DeleteDialog } from "@src/components/dialogs";
+import SubHeaderLayout from "@src/components/Layout/SubHeaderLayout";
+import ActionButtonRow from "@src/components/ActionButtonRow/ActionButtonRow";
+import ReusableCardList from "@src/components/ReusableCardList/ReusableCardList";
 import AppointmentEdit from "./AppointmentEdit";
 
-import RouterConfig from "src/app/RouterConfig";
-import { Prescription } from "src/types/Medication";
-import { PanelStyleOverrides } from "src/components/Panel/PanelStyleOverrides";
-import { PagesWithDelete } from "src/components/dialogs/EndMedicationDialog";
-import { Appointment } from "src/types/Appointment";
-import { monthsFullNames } from "src/utils/utils";
-import { getToday } from "src/utils/dates";
+import RouterConfig from "@src/app/RouterConfig";
+import { Prescription } from "@src/types/Medication";
+import { PanelStyleOverrides } from "@src/components/Panel/PanelStyleOverrides";
+import { PagesWithDelete } from "@src/components/dialogs/EndMedicationDialog";
+import { Appointment } from "@src/types/Appointment";
+import { monthsFullNames } from "@src/utils/utils";
+import { getToday } from "@src/utils/dates";
 import { getClassNames } from "./AppointmentView.classNames";
 
 import {
   getAdjustedTime,
   useGetTimezoneInfo,
-} from "src/common/hooks/useGetTimezoneInfo";
+} from "@src/common/hooks/useGetTimezoneInfo";
 
 const AppointmentView: React.FC = () => {
   //   const { data } = useGetAppointmentsQuery();

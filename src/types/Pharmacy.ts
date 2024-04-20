@@ -1,3 +1,4 @@
-import { GetPharmaciesQuery } from 'src/graphQL/serverMocks/graphQLGeneratedCode';
+import { GetPharmaciesQuery } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
 
-export type Pharmacy = GetPharmaciesQuery['careRecipientPharmacies']['pharmacies'][0];
+export type Pharmacy =
+  GetPharmaciesQuery["careRecipientPharmacies"]["pharmacies"][0];

@@ -1,3 +1,4 @@
-import { GetImmunizationsQuery } from 'src/graphQL/serverMocks/graphQLGeneratedCode';
+import { GetImmunizationsQuery } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
 
-export type Immunization = GetImmunizationsQuery['careRecipientImmunizations']['immunizations'][0];
+export type Immunization =
+  GetImmunizationsQuery["careRecipientImmunizations"]["immunizations"][0];

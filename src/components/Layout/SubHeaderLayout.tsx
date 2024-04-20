@@ -8,9 +8,9 @@ import {
   PrimaryButton,
 } from "@fluentui/react";
 import { getClassNames } from "./SubHeaderLayout.classNames";
-import { useIsMobile } from "src/common/hooks/useMediaQueries";
+import { useIsMobile } from "@src/common/hooks/useMediaQueries";
 
-import { useWindowDimensions } from "src/common/hooks/useMediaQueries";
+import { useWindowDimensions } from "@src/common/hooks/useMediaQueries";
 
 export interface SubHeaderLayoutProps {
   children: React.ReactNode;

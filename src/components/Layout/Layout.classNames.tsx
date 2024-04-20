@@ -5,7 +5,7 @@ import {
   BREAKPOINTS,
   MAX_HEIGHT_BREAKPOINT,
 } from "../../common/styles/Breakpoints";
-// import { BOTTOM_NAV_HEIGHT } from "src/common/components/Navigation/BottomMenu/BottomMenu.classNames";
+// import { BOTTOM_NAV_HEIGHT } from "@src/common/components/Navigation/BottomMenu/BottomMenu.classNames";
 
 interface ILayoutClassNames {
   "Layout--appBody": string;

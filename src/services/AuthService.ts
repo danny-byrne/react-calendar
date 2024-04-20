@@ -3,15 +3,15 @@ import {
   loginRequest,
   graphRequest,
   useFirstPartyAuth,
-} from "src/app/Constants";
+} from "@src/app/Constants";
 // import {
 //     InteractionRequiredAuthError,
 //     IPublicClientApplication,
 //     PublicClientApplication,
 //     AccountInfo,
 // } from '@azure/msal-browser';
-import { BASE_REDIRECT_URI } from "src/app/Constants";
-import { LOCAL_STORAGE_KEYS } from "src/app/Strings";
+import { BASE_REDIRECT_URI } from "@src/app/Constants";
+import { LOCAL_STORAGE_KEYS } from "@src/app/Strings";
 
 const msalInstance = new PublicClientApplication(msalConfig);
 

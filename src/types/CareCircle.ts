@@ -3,7 +3,7 @@ import {
     Roles,
     RelationshipsToLovedOne,
     GetCareTeamQuery,
-} from 'src/graphQL/serverMocks/graphQLGeneratedCode';
+} from '@srcc/graphQL/serverMocks/graphQLGeneratedCode';
 export type CareCircle = {
     name?: string;
     careCircleMembers?: CareCircleMember[];
