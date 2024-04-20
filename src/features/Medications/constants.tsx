@@ -2,7 +2,7 @@ import { ONE, MEDICATION_COURSE_ELEMENT } from "@src/utils/constant";
 import { getToday } from "@src/utils/dates";
 import { IDatePickerStyles } from "@fluentui/react/lib/DatePicker";
 import { Frequency } from "rrule";
-import { MERIDIEMS } from "./Schedule/DosageForm";
+import { MERIDIEMS } from "@src/utils/constant";
 import { RRule, Weekday } from "rrule";
 
 const initialDaysOfWeek: Weekday[] = [

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import { useCreateAppointmentMutation } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
+// import { useCreateAppointmentMutation } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
 import { useFeedbackService } from "@src/services/FeedbackService";
 
-import { PanelContainerWithHeader } from "@src/common/components/Panel/PanelContainerWithHeader";
+import { PanelContainerWithHeader } from "@src/components/Panel/PanelContainerWithHeader";
 import AppointmentForm from "./AppointmentForm";
 
 import RouterConfig from "@src/app/RouterConfig";

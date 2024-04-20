@@ -1,6 +1,6 @@
 import React from "react";
 import { Stack, Persona } from "@fluentui/react";
-import { AvatarSizes } from "@src/common/components/Avatar";
+import { AvatarSizes } from "@src/components/Avatar";
 import { getClassNames } from "./PrintableContentContainer.classNames";
 
 import { formatPhoneNumber } from "@src/utils/utils";

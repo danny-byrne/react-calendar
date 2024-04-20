@@ -1,5 +1,5 @@
 import { mergeStyleSets } from "@fluentui/react";
-import { modalLayer } from "@src/features/Medications/zIndex";
+import { modalLayer } from "@src/common/styles/zIndex";
 
 interface IPanelContainerWithHeaderClassNames {
   "wc-PanelContainerWithHeader--subHeaderContainer": string;

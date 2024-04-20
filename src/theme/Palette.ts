@@ -1,20 +1,20 @@
-import { IPalette } from '@fluentui/react';
-import { colors } from 'src/common/styles/colors';
+import { IPalette } from "@fluentui/react";
+import { colors } from "@src/common/styles/colors";
 
 export const palette: Partial<IPalette> = {
-    themePrimary: colors.fabric.neutrals.WCprimary,
+  themePrimary: colors.fabric.neutrals.WCprimary,
 
-    themeDarker: colors.fabric.neutrals.WCshade30,
+  themeDarker: colors.fabric.neutrals.WCshade30,
 
-    themeDark: colors.fabric.neutrals.WCshade20,
+  themeDark: colors.fabric.neutrals.WCshade20,
 
-    themeDarkAlt: colors.fabric.neutrals.WCDarkAlt,
+  themeDarkAlt: colors.fabric.neutrals.WCDarkAlt,
 
-    themeSecondary: colors.fabric.neutrals.WCSecondary,
+  themeSecondary: colors.fabric.neutrals.WCSecondary,
 
-    themeTertiary: colors.fabric.neutrals.WCTertiary,
+  themeTertiary: colors.fabric.neutrals.WCTertiary,
 
-    themeLight: colors.fabric.neutrals.WCtint30,
+  themeLight: colors.fabric.neutrals.WCtint30,
 
-    themeLighter: colors.fabric.neutrals.WCtint40,
+  themeLighter: colors.fabric.neutrals.WCtint40,
 };

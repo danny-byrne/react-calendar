@@ -5,10 +5,10 @@ import {
   Dosage,
   MedicationCourse,
 } from "@src/features/Medications/MedicationMutationTypes";
-import {
-  DosageCreateInput,
-  Pharmacy,
-} from "@src/graphQL/serverMocks/graphQLGeneratedCode";
+// import {
+//   DosageCreateInput,
+//   Pharmacy,
+// } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
 import { timesDropDownOptions, formatPhoneNumber } from "@src/utils/utils";
 import { DAYS } from "@src/utils/dates";
 
@@ -19,11 +19,12 @@ import {
   Prescription,
 } from "@src/types/Medication";
 import { capitalizeFirstLetter } from "@src/common/helpers/textFormatting";
-import { MERIDIEMS } from "@src/features/Medications/Schedule/DosageForm";
+import { MERIDIEMS } from "@src/utils/constant";
 
 import { MedicationFormikType } from "@src/features/Medications/MedicationForm";
 import { dateOptions, getDateAtMidday } from "@src/utils/dates";
-import { locale } from "@src/features/AppProfile/constants";
+// import { locale } from "@src/features/AppProfile/constants";
+
 import { isValidPhone } from "@src/utils/validators";
 import { todaysDateAtMidnightIso } from "@src/features/MedManagerLayout/helpers";
 
@@ -31,7 +32,7 @@ import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import { initialDosageValues } from "@src/features/Medications/constants";
-
+const locale = "en-US";
 dayjs.extend(utc);
 dayjs.extend(timezone);
 

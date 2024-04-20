@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Stack } from "@fluentui/react";
 
-import SubHeaderLayout from "@src/common/components/Layout/SubHeaderLayout";
+import SubHeaderLayout from "@src/components/Layout/SubHeaderLayout";
 import { getClassNames } from "./PanelContainerWithHeader.classNames";
 
 interface IPanelContainerWithHeaderProps {

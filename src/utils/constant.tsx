@@ -8,4 +8,9 @@ const MEDICATION_COURSE_ELEMENT: MedicationCourse = {
   doses: [{ value: undefined, time: undefined }],
 };
 
-export { ONE, MEDICATION_COURSE_ELEMENT };
+enum MERIDIEMS {
+  AM = "AM",
+  PM = "PM",
+}
+
+export { ONE, MEDICATION_COURSE_ELEMENT, MERIDIEMS };

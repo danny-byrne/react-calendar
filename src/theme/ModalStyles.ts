@@ -1,17 +1,17 @@
-import { IModalStyles } from '@fluentui/react';
-import { BREAKPOINTS } from 'src/app/Breakpoints';
+import { IModalStyles } from "@fluentui/react";
+import { BREAKPOINTS } from "@src/common/styles/Breakpoints";
 
 export const modalStyles: IModalStyles = {
-    root: '',
-    keyboardMoveIcon: '',
-    keyboardMoveIconContainer: '',
-    layer: '',
-    main: {
-        width: '311px',
-        [BREAKPOINTS.DESKTOP_SMALL]: {
-            width: '560px',
-            maxWidth: '100%',
-        },
+  root: "",
+  keyboardMoveIcon: "",
+  keyboardMoveIconContainer: "",
+  layer: "",
+  main: {
+    width: "311px",
+    [BREAKPOINTS.DESKTOP_SMALL]: {
+      width: "560px",
+      maxWidth: "100%",
     },
-    scrollableContent: '',
+  },
+  scrollableContent: "",
 };
