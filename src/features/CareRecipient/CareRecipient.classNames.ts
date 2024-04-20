@@ -6,7 +6,7 @@ import {
   IStyleFunctionOrObject,
 } from "@fluentui/react";
 import { BREAKPOINTS } from "@src/common/styles/Breakpoints";
-import { colors } from "src/common/styles/colors";
+import { colors } from "@src/common/styles/colors";
 
 interface ICarePlanClassNames {
   "wc-CareRecipient--Persona": string;

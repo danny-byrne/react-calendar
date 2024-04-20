@@ -1,9 +1,13 @@
 import { IChoiceGroupOption, Stack, TextField } from "@fluentui/react";
 import React from "react";
 // import { BloodTypes, MeasurementSystem } from 'src/graphQL/serverMocks/graphQLGeneratedCode';
-import { getDateAtMidday } from "src/utils/dates";
-import { formatPhoneNumber } from "src/utils/utils";
-import { isValidEmail, isValidFeet, isValidInches } from "src/utils/validators";
+import { getDateAtMidday } from "@src/utils/dates";
+import { formatPhoneNumber } from "@src/utils/utils";
+import {
+  isValidEmail,
+  isValidFeet,
+  isValidInches,
+} from "@src/utils/validators";
 import { getClassNames } from "./CareRecipient.classNames";
 
 const classNames = getClassNames();

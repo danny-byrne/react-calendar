@@ -1,6 +1,6 @@
 /*eslint-disable*/
 import { Stack } from "@fluentui/react";
-import { DayTime } from "@src/common/components";
+import DayTime from "@src/components/DayTime";
 
 import { inputErrorStyles } from "@src/features/Medications/constants";
 
