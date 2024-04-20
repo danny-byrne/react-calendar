@@ -247,15 +247,15 @@ const intervalsDropdown = [
 ];
 
 const familyRelationshipDropdownOptions = [
-  { key: RelationshipsToLovedOne.Child, text: "Child" },
-  { key: RelationshipsToLovedOne.FamilyMember, text: "Family Member" },
-  { key: RelationshipsToLovedOne.Friend, text: "Friend" },
-  { key: RelationshipsToLovedOne.Grandparent, text: "Grandparent" },
-  { key: RelationshipsToLovedOne.Neighbor, text: "Neighbor" },
-  { key: RelationshipsToLovedOne.Parent, text: "Parent" },
-  { key: RelationshipsToLovedOne.Partner, text: "Partner" },
-  { key: RelationshipsToLovedOne.Sibling, text: "Sibling" },
-  { key: RelationshipsToLovedOne.Spouse, text: "Spouse" },
+  { key: "CHILD", text: "Child" },
+  { key: "FAMILY MEMBER", text: "Family Member" },
+  { key: "FRIEND", text: "Friend" },
+  { key: "GRANDPARENT", text: "Grandparent" },
+  { key: "NEIGHBOR", text: "Neighbor" },
+  { key: "PARENT", text: "Parent" },
+  { key: "PARTNER", text: "Partner" },
+  { key: "SIBLING", text: "Sibling" },
+  { key: "SPOUSE", text: "Spouse" },
 ];
 
 const getRelationshipText = (
@@ -289,18 +289,18 @@ const isNotRunningInJest = () => {
 };
 
 const monthDropdownOptions = [
-  { key: Month.January, text: "January" },
-  { key: Month.February, text: "February" },
-  { key: Month.March, text: "March" },
-  { key: Month.April, text: "April" },
-  { key: Month.May, text: "May" },
-  { key: Month.June, text: "June" },
-  { key: Month.July, text: "July" },
-  { key: Month.August, text: "August" },
-  { key: Month.September, text: "September" },
-  { key: Month.October, text: "October" },
-  { key: Month.November, text: "November" },
-  { key: Month.December, text: "December" },
+  { key: "JANUARY", text: "January" },
+  { key: "FEBRUARY", text: "February" },
+  { key: "MARCH", text: "March" },
+  { key: "APRIL", text: "April" },
+  { key: "MAY", text: "May" },
+  { key: "JUNE", text: "June" },
+  { key: "JULY", text: "July" },
+  { key: "AUGUST", text: "August" },
+  { key: "SEPTEMBER", text: "September" },
+  { key: "OCTOBER", text: "October" },
+  { key: "NOVEMBER", text: "November" },
+  { key: "DECEMBER", text: "December" },
 ];
 
 const getDaysDropdownOptions = (year: number, month: number) => {

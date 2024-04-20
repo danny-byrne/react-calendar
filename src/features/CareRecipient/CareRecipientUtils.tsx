@@ -89,19 +89,19 @@ const getErrorMessageInches = (value: string): string => {
 };
 
 const bloodTypeDropDown = [
-  { key: BloodTypes.ANeg, text: "A-" },
-  { key: BloodTypes.APos, text: "A+" },
-  { key: BloodTypes.AbNeg, text: "AB-" },
-  { key: BloodTypes.AbPos, text: "AB+" },
-  { key: BloodTypes.BNeg, text: "B-" },
-  { key: BloodTypes.BPos, text: "B+" },
-  { key: BloodTypes.ONeg, text: "O-" },
-  { key: BloodTypes.OPos, text: "O+" },
+  { key: "A-", text: "A-" },
+  { key: "A+", text: "A+" },
+  { key: "AB-", text: "AB-" },
+  { key: "AB+", text: "AB+" },
+  { key: "B-", text: "B-" },
+  { key: "B+", text: "B+" },
+  { key: "O-", text: "O-" },
+  { key: "O+", text: "O+" },
 ];
 
 const measurementSystemPreferenceChoiceGroupOptions: IChoiceGroupOption[] = [
-  { key: MeasurementSystem.Imperial, text: "Imperial (USA)" },
-  { key: MeasurementSystem.Metric, text: "Metric" },
+  { key: "Imperial (USA)", text: "Imperial (USA)" },
+  { key: "Metric", text: "Metric" },
 ];
 const centimetersToInches = 2.54;
 const kilogramsToPounds = 2.205;

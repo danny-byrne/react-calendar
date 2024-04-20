@@ -1,6 +1,6 @@
-import { Roles } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
-import { GetMemberQuery } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
-import { RelationshipsToLovedOne } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
+// import { Roles } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
+// import { GetMemberQuery } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
+// import { RelationshipsToLovedOne } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
 
 export type Member = {
   id: string;
@@ -23,7 +23,7 @@ export type IMemberEditFormikProps = {
   values: {
     isEmergencyContact: boolean;
     isAdmin: boolean;
-    relationshipToLovedOne: RelationshipsToLovedOne;
+    relationshipToLovedOne: string;
     timeZoneID: string;
   };
   setFieldValue: (_, item) => void;

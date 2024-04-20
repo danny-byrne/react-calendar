@@ -14,7 +14,6 @@ const initialDaysOfWeek: Weekday[] = [
   RRule.FR,
   RRule.SA,
 ];
-s;
 
 export const initialDosageValues = {
   doseValue: 1,
