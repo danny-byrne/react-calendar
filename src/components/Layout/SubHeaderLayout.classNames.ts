@@ -1,7 +1,7 @@
 import { mergeStyleSets, FontSizes, FontWeights } from "@fluentui/react";
 import { BREAKPOINTS } from "@src/app/Breakpoints";
-import { LOCAL_STORAGE_KEYS } from "@src/app/Strings";
-import { colors } from "../../styles/colors";
+// import { LOCAL_STORAGE_KEYS } from "@src/app/Strings";
+import { colors } from "@src/common/styles/colors";
 
 const HEADER_HEIGHT = 56;
 const SUBHEADER_HEIGHT = 48;
@@ -21,15 +21,17 @@ interface ILayoutClassNames {
 export const getClassNames = (height, isPanel): ILayoutClassNames => {
   const CONTENT_CONTAINER_HEIGHT = height - HEADER_HEIGHT - SUBHEADER_HEIGHT;
 
-  const maxHeight = parseInt(
-    localStorage.getItem(LOCAL_STORAGE_KEYS.MAX_HEIGHT)
-  );
+  //TODO: figure this out
+  // const maxHeight = parseInt(
+  //   localStorage.getItem(LOCAL_STORAGE_KEYS.MAX_HEIGHT)
+  // );
   // Panel height conditionally uses maxHeight from LocalStorage if height is smaller than 300px as a
   // fix for the panel height being cut in half if the panel is opened when the keyboard is open on Android
   const panelHeight =
-    height < 300
-      ? maxHeight - HEADER_HEIGHT - SUBHEADER_HEIGHT
-      : CONTENT_CONTAINER_HEIGHT;
+    // height < 300
+    //   ? maxHeight - HEADER_HEIGHT - SUBHEADER_HEIGHT
+    // :
+    CONTENT_CONTAINER_HEIGHT;
 
   return mergeStyleSets({
     "wc-SubHeaderLayout--container": {

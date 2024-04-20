@@ -8,18 +8,18 @@ import {
   DayOfWeek,
   Checkbox,
 } from "@fluentui/react";
-import { trackFieldChanged } from "@src/wcpConsentInit";
+// import { trackFieldChanged } from "@src/wcpConsentInit";
 import { useGetDataForPrintPages } from "@src/common/hooks/useGetDataForPrintPages";
-import SubHeaderLayout from "@src/common/components/Layout/SubHeaderLayout";
+import SubHeaderLayout from "@src/components/Layout/SubHeaderLayout";
 
 import PrintableContentContainer from "@src/features/PrintableContent/PrintableContentContainer";
 import { theme } from "@src/theme";
 import CalendarPrint from "@src/features/PrintableContent/CalendarPrint/CalendarPrint";
-import { RecordStatus } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
-import {
-  useGetPrescriptionsWithScheduleQuery,
-  Appointment,
-} from "@src/graphQL/serverMocks/graphQLGeneratedCode";
+// import { RecordStatus } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
+// import {
+//   useGetPrescriptionsWithScheduleQuery,
+//   Appointment,
+// } from "@src/graphQL/serverMocks/graphQLGeneratedCode";
 import {
   sortEventData,
   createMedicationCalendarEventsBasedOnMedicationsData,
