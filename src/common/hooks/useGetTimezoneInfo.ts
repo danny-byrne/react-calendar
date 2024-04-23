@@ -11,6 +11,9 @@ export const useGetTimezoneInfo = () => {
   // const careRecipientTimezone =
   //   careRecipientProfileData?.careRecipientProfile?.timeZoneID;
   const appUserTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+  console.log({ appUserTimezone });
+  const careRecipientTimezone = appUserTimezone;
   const careRecipientTimezoneFormatted = removeUnderscoreFromTimezone(
     careRecipientTimezone
   );
