@@ -16,7 +16,7 @@ import SubHeaderLayout from "@src/components/Layout/SubHeaderLayout";
 import AppointmentAdd from "./AppointmentAdd";
 import ReusableCardList from "@src/components/ReusableCardList/ReusableCardList";
 
-import RouterConfig from "@src/app/RouterConfig";
+// import RouterConfig from "@src/app/RouterConfig";
 import {
   months,
   monthsFullNames,
@@ -37,6 +37,7 @@ import {
   useGetTimezoneInfo,
   getAdjustedTime,
 } from "@src/common/hooks/useGetTimezoneInfo";
+import { dummyAppointments } from "./DummyData";
 
 const Calendar: React.FC = () => {
   const { setSuccessToast } = useFeedbackService();
@@ -46,7 +47,7 @@ const Calendar: React.FC = () => {
 
   const fabClassNames = getFABClassNames(false);
   const classNames = getClassNames();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const isMobile = useIsMobile();
   const status = getSearchParam("status");
   const location = useLocation();
@@ -55,7 +56,8 @@ const Calendar: React.FC = () => {
   // const { data } = useGetAppointmentsQuery();
   // replace with dummy data until API is set up
 
-  const [appointments, setAppointments] = useState<Appointment[]>([]);
+  const [appointments, setAppointments] =
+    useState<Appointment[]>(dummyAppointments);
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [month, setMonth] = useState("");
   const [day, setDay] = useState(1);
@@ -150,7 +152,8 @@ const Calendar: React.FC = () => {
     });
 
     return {
-      onClick: () => navigate(RouterConfig.Appointment(appointment.id)),
+      // onClick: () => navigate(RouterConfig.Appointment(appointment.id)),
+      onClick: () => console.log("clicked"),
       content: (
         <AppointmentCard
           titleText={appointment.description}
@@ -167,7 +170,7 @@ const Calendar: React.FC = () => {
         actionButtonText={"Add"}
         onClickActionButton={onClickActionButton}
       >
-        {isMobile && (
+        {false && (
           <Stack
             className={fabClassNames["wc-FloatingActionButton--fabContainer"]}
           >

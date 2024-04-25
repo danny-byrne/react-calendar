@@ -12,7 +12,7 @@ export const useGetTimezoneInfo = () => {
   //   careRecipientProfileData?.careRecipientProfile?.timeZoneID;
   const appUserTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-  console.log({ appUserTimezone });
+  // console.log({ appUserTimezone });
   const careRecipientTimezone = appUserTimezone;
   const careRecipientTimezoneFormatted = removeUnderscoreFromTimezone(
     careRecipientTimezone
@@ -20,7 +20,7 @@ export const useGetTimezoneInfo = () => {
 
   return {
     appUserTimezone,
-    // careRecipientTimezone,
+    careRecipientTimezone,
     careRecipientTimezoneFormatted,
   };
 };
