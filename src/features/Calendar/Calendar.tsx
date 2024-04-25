@@ -33,11 +33,9 @@ import ReusablePrintButton from "@src/components/ReusablePrintButton/ReusablePri
 import { usePrintPanelControls } from "@src/common/hooks/usePrintPanel";
 import { PrintPanel } from "@src/components/Panel/PrintPanel";
 import CalendarPrintPanel from "@src/features/PrintableContent/CalendarPrint/CalendarPrintPanel";
-import {
-  useGetTimezoneInfo,
-  getAdjustedTime,
-} from "@src/common/hooks/useGetTimezoneInfo";
+import { useGetTimezoneInfo } from "@src/common/hooks/useGetTimezoneInfo";
 import { dummyAppointments } from "./DummyData";
+import { getButtonPropsList } from "./AppointmentCard";
 
 const Calendar: React.FC = () => {
   const { setSuccessToast } = useFeedbackService();
@@ -90,6 +88,12 @@ const Calendar: React.FC = () => {
     setSelectedDateAsBeginningOfToday();
   }, []);
 
+  const { appUserTimezone, careRecipientTimezone } = useGetTimezoneInfo();
+  const buttonPropsList = getButtonPropsList({
+    appointments,
+    appUserTimezone,
+    careRecipientTimezone,
+  });
   //   useEffect(() => {
   //     if (data && selectedDate) {
   //       const filteredAppointments =
@@ -105,63 +109,6 @@ const Calendar: React.FC = () => {
   //       setAppointments(filteredAppointments);
   //     }
   //   }, [data, selectedDate]);
-
-  interface IExampleAppointmentProps {
-    titleText: string;
-    timetext: string;
-    locationName?: string;
-  }
-
-  const AppointmentCard: React.FC<IExampleAppointmentProps> = ({
-    titleText,
-    timetext,
-    locationName,
-  }) => {
-    return (
-      <Stack>
-        <Stack horizontal tokens={{ childrenGap: 12 }}>
-          <div className={classNames["wc-Calendar--appointmentBar"]} />
-          <Stack>
-            <Text className={classNames["wc-Calendar--appointmentText"]}>
-              {titleText}
-            </Text>
-            <Text className={classNames["wc-Calendar--appointmentTime"]}>
-              {timetext}
-            </Text>
-          </Stack>
-        </Stack>
-        {locationName && (
-          <Text className={classNames["wc-Calendar--appointmentLocationText"]}>
-            {locationName}
-          </Text>
-        )}
-      </Stack>
-    );
-  };
-
-  const { appUserTimezone, careRecipientTimezone } = useGetTimezoneInfo();
-
-  const buttonPropsList = appointments.map((appointment) => {
-    const { startDateTime, endDateTime } = appointment;
-
-    const { timeText } = getAdjustedTime({
-      startDateTime,
-      endDateTime,
-      careRecipientTimezone,
-      appUserTimezone,
-    });
-
-    return {
-      // onClick: () => navigate(RouterConfig.Appointment(appointment.id)),
-      onClick: () => console.log("clicked"),
-      content: (
-        <AppointmentCard
-          titleText={appointment.description}
-          timetext={timeText}
-        />
-      ),
-    };
-  });
 
   return (
     <>
